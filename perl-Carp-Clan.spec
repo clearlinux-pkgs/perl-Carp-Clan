@@ -4,12 +4,13 @@
 #
 Name     : perl-Carp-Clan
 Version  : 6.06
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Carp-Clan-6.06.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Carp-Clan-6.06.tar.gz
 Summary  : 'Report errors from perspective of caller of a "clan" of modules'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Carp-Clan-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::Exception)
 
@@ -26,6 +27,14 @@ Provides: perl-Carp-Clan-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-Carp-Clan package.
+
+
+%package license
+Summary: license components for the perl-Carp-Clan package.
+Group: Default
+
+%description license
+license components for the perl-Carp-Clan package.
 
 
 %prep
@@ -53,6 +62,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Carp-Clan
+cp license/Artistic.txt %{buildroot}/usr/share/package-licenses/perl-Carp-Clan/license_Artistic.txt
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -65,9 +76,13 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Carp/Clan.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Carp/Clan.pod
+/usr/lib/perl5/vendor_perl/5.28.0/Carp/Clan.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Carp/Clan.pod
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Carp::Clan.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Carp-Clan/license_Artistic.txt
