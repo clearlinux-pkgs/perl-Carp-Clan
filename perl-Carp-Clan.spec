@@ -4,7 +4,7 @@
 #
 Name     : perl-Carp-Clan
 Version  : 6.06
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Carp-Clan-6.06.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Carp-Clan-6.06.tar.gz
 Summary  : 'Report errors from perspective of caller of a "clan" of modules'
