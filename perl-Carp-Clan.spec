@@ -4,10 +4,10 @@
 #
 Name     : perl-Carp-Clan
 Version  : 6.07
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.07.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.07.tar.gz
-Summary  : 'Report errors from perspective of caller of a "clan" of modules'
+Summary  : Report errors from perspective of caller of a "clan" of modules
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Carp-Clan-license = %{version}-%{release}
@@ -22,6 +22,7 @@ Report errors from perspective of caller of a "clan" of modules
 Summary: dev components for the perl-Carp-Clan package.
 Group: Development
 Provides: perl-Carp-Clan-devel = %{version}-%{release}
+Requires: perl-Carp-Clan = %{version}-%{release}
 
 %description dev
 dev components for the perl-Carp-Clan package.
