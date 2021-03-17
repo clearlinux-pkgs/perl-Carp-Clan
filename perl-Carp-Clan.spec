@@ -4,7 +4,7 @@
 #
 Name     : perl-Carp-Clan
 Version  : 6.08
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.08.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.08.tar.gz
 Summary  : 'Report errors from perspective of caller of a "clan" of modules'
@@ -97,4 +97,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Carp/Clan.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Carp/Clan.pm
